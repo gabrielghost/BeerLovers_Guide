@@ -4,13 +4,11 @@ import Home from './home';
 
 const App = function (props) {
   return (
-    <div>
       <div>
         <Switch>
-          <Route path="/" component={Home} />
+          <Route path="" component={Home} />
         </Switch>
       </div>
-    </div>
   );
 };
 
