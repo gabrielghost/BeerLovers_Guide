@@ -1,16 +1,16 @@
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+
 module.exports = {
   entry: [
     './src/index.js'
   ],
   module: {
     rules: [{
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['react', 'env', 'stage-1']
-          }
-        }
+      test: /\.(js|jsx)$/,
+      exclude: /(node_modules|bower_components)/,
+      use: {
+        loader: 'babel-loader'
+      }
       },
       {
         test: /\.scss$/,

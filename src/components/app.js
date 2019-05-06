@@ -9,13 +9,15 @@ class App extends Component {
   render() {
     let beerIndex = this.props.beers
     if (beerIndex.beer){
-      let beerIndexArray = beerIndex.data
+      let beerIndexArray = beerIndex.beer
       return (
         <div>
         {beerIndexArray.map((item, i) => (
           <div>
           <h1>{i+1}</h1>
             <p>Name: {item.name}</p>
+            <p>ABV: {item.abv}</p>
+            <p>IBU: {item.ibu}</p>
           </div>
         ))}
         </div>
