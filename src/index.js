@@ -6,6 +6,7 @@ import App from './components/app';
 import history from './history';
 import store from './store';
 import './style/style.scss';
+import './fonts/Open_Sans/OpenSans.scss';
 
 ReactDOM.render(
   <Provider store={store}>

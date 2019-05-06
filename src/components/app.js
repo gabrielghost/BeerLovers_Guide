@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom'
 import * as actions from '../actions/index';
 
 class App extends Component {
@@ -12,14 +13,19 @@ class App extends Component {
       let beerIndexArray = beerIndex.beer
       return (
         <div>
+        <div class='container'>
+        <h1>The Beerlover's Guide To The Galaxy</h1>
         {beerIndexArray.map((item, i) => (
           <div>
-          <h1>{i+1}</h1>
-            <p>Name: {item.name}</p>
-            <p>ABV: {item.abv}</p>
-            <p>IBU: {item.ibu}</p>
+
+          <Link to={{pathname: `/${item.id}`}} style={{color: 'black'}} activeStyle={{color: 'red'}}>
+          <div class='beerLi'>
+          <p>{item.name} ABV: {item.abv}  IBU: {item.ibu}</p>
+          </div>
+          </Link>
           </div>
         ))}
+        </div>
         </div>
       );
     } else {
