@@ -1,11 +1,17 @@
 body {
-  background-color: #FFE7B3;
+  background-color: #fcf5e6;
   font-family: "Open-Sans";
 }
 .beerLi{
   background-color: white;
   margin: 10px;
   height: 70px;
+  border: 1px solid #f9e4b9;
+}
+.beerTableHeader{
+    background-color: white;
+    padding: 7px;
+    text-align: center;
 }
 .beerLi p{
   display: inline-block;

@@ -1,45 +1,25 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import BeerIndex from './beerIndex';
+import BeerView from './beerView';
 import { Link } from 'react-router-dom'
-import * as actions from '../actions/index';
 
-class App extends Component {
-  componentDidMount(){
-    this.props.beerIndex();
-  }
-  render() {
-    let beerIndex = this.props.beers
-    if (beerIndex.beer){
-      let beerIndexArray = beerIndex.beer
-      return (
-        <div>
-        <div class='container'>
-        <h1>The Beerlover's Guide To The Galaxy</h1>
-        {beerIndexArray.map((item, i) => (
-          <div>
-
-          <Link to={{pathname: `/${item.id}`}} style={{color: 'black'}} activeStyle={{color: 'red'}}>
-          <div class='beerLi'>
-          <p>{item.name} ABV: {item.abv}  IBU: {item.ibu}</p>
-          </div>
-          </Link>
-          </div>
-        ))}
+const App = function (props) {
+  return (
+      <div>
+      <div className='container'>
+      <Link to={{pathname: `/`}} >
+      <div className='beerTableHeader'>
+      <h3>The Beerlover's Guide To The Galaxy</h3>
+      </div>
+    </Link>
+        <Switch>
+          <Route path="/:id" component={BeerView} props={props} />
+          <Route path="" component={BeerIndex} />
+        </Switch>
         </div>
-        </div>
-      );
-    } else {
-      return (
-        <p>Loading...</p>
-      )
-    }
-  }
-}
+      </div>
+  );
+};
 
-function mapStateToProps (state) {
-  return {
-    beers: state.state
-  };
-}
-
-export default connect(mapStateToProps, actions)(App);
+export { App as default };
