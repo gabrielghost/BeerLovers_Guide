@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { BEER_INDEX } from './types';
-import { authError } from './auth';
 
 const ROOT_URL = 'https://sandbox-api.brewerydb.com/v2/beers/?key=024c69b598351ce63098c40a50cd7171'
 

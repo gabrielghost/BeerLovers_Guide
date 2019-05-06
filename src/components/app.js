@@ -1,15 +1,37 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import Home from './home';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../actions/index';
 
-const App = function (props) {
-  return (
-      <div>
-        <Switch>
-          <Route path="" component={Home} />
-        </Switch>
-      </div>
-  );
-};
+class App extends Component {
+  componentDidMount(){
+    this.props.beerIndex();
+  }
+  render() {
+    let beerIndex = this.props.beers
+    if (beerIndex.beer){
+      let beerIndexArray = beerIndex.data
+      return (
+        <div>
+        {beerIndexArray.map((item, i) => (
+          <div>
+          <h1>{i+1}</h1>
+            <p>Name: {item.name}</p>
+          </div>
+        ))}
+        </div>
+      );
+    } else {
+      return (
+        <p>Loading...</p>
+      )
+    }
+  }
+}
 
-export { App as default };
+function mapStateToProps (state) {
+  return {
+    beers: state.state
+  };
+}
+
+export default connect(mapStateToProps, actions)(App);
