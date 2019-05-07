@@ -15,7 +15,7 @@ class beerView extends Component {
         <div>
         {beerIndexArray.map((item, i) => (
           <div key={i}>
-          <Link to={{pathname: `/${item.id}`}} style={{color: 'black'}} >
+          <Link to={{pathname: `beer/${item.id}`}} style={{color: 'black'}} >
           <div className='beerLi'>
           <p>{item.name} ABV: {item.abv}  IBU: {item.ibu}</p>
           </div>
