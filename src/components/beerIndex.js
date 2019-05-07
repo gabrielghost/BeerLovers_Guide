@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
 import * as actions from '../actions/index';
+import InfiniteScroll from 'react-infinite-scroller';
 
 class beerView extends Component {
   componentDidMount(){
@@ -17,7 +18,13 @@ class beerView extends Component {
           <div key={i}>
           <Link to={{pathname: `beer/${item.id}`}} style={{color: 'black'}} >
           <div className='beerLi'>
-          <p>{item.name} ABV: {item.abv}  IBU: {item.ibu}</p>
+          <div className='beerLiLeft'>
+          <p>{item.name}</p>
+          </div>
+          <div className='beerLiRight'>
+           <p>{item.abv? `ABV: ${item.abv}%` : ``}</p>
+           <p>{item.ibu? `IBU: ${item.ibu}` : ``}</p>
+          </div>
           </div>
           </Link>
           </div>

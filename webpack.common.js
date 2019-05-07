@@ -1,8 +1,14 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: [
     './src/index.js'
+  ],
+  plugins: [
+    new CopyWebpackPlugin([
+      { from: './src/favicon.ico' }
+    ])
   ],
   module: {
     rules: [{

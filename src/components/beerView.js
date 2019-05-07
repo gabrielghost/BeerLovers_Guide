@@ -34,15 +34,34 @@ class beerView extends Component {
             beerDescription = 'This beer has no description, doesn\'t mean it isn\'t tasty as hell though!'
           }
 
+          let beerLabelImg;
+          if ('labels' in item) {
+            if ('large' in item.labels) {
+              beerLabelImg = item.labels.large
+            }
+          } else if ('labels' in item) {
+              beerLabelImg = item.labels.medium
+          } else {
+            beerLabelImg = ''
+          }
 
           return (
             <div className='beerView' key={i}>
+            <div className='beerViewLeft'>
               <h1>{item.name? `${item.name}` : 'Oops this beer has no name'}</h1>
-              <h1>{item.abv? `ABV: ${item.abv}` : ''}</h1>
-              <h1>{item.ibu? `IBU: ${item.ibu}` : ''}</h1>
-              <h1>{item.glasswareId? `Glassware: ${item.glasswareId}` : ''}</h1>
-              <h1>{organicMarker}</h1>
+              <div className='beerInfo'>
+              <h3>{item.abv? `ABV: ${item.abv}%` : ''}</h3>
+              <h3>{item.ibu? `IBU: ${item.ibu}` : ''}</h3>
+              <h3>{item.glasswareId? `Glassware: ${item.glasswareId}` : ''}</h3>
+              <h3>{organicMarker}</h3>
+              </div>
+              </div>
+                <div className='beerViewRight'>
+                <img src={beerLabelImg} />
+                </div>
+                  <div className='beerViewDescription'>
               <p>{beerDescription}</p>
+              </div>
               <Link to={{pathname: `/`}} style={{color: 'black'}} >Back</Link>
             </div>
           );

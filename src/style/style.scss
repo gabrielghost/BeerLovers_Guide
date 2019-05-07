@@ -2,27 +2,78 @@ body {
   background-color: #fcf5e6;
   font-family: "Open-Sans";
 }
+.container{
+  width: 60%;
+  margin: 0 auto;
+}
+@media screen and (max-width:900px) {
+  .container {
+    width: 98%;
+  }
+}
 .beerLi{
   background-color: white;
   margin: 10px;
-  height: 70px;
+  height: 5em;
   border: 1px solid #f9e4b9;
+}
+.beerLiRight{
+  float: right;
+}
+.beerLiLeft{
+  float: left;
 }
 .beerTableHeader{
     background-color: white;
     padding: 7px;
     text-align: center;
+      border: 1px solid #f9e4b9;
+      font-style: normal;
+      color: black;
 }
 .beerLi p{
   display: inline-block;
   vertical-align: middle;
-  line-height: inherit;
+  line-height: 3em;
+  margin: 15px;
 }
 .beerView{
+  background-color: white;
+  margin: 10px;
   font-size: 12px;
   line-height: 28px;
+    border: 1px solid #f9e4b9;
+    padding: 10px;
+      text-align: justify;
 }
-.container{
+.beerViewLeft{
   width: 60%;
-  margin: 0 auto;
+  float: left;
+  display: inline;
+}
+.beerViewRight{
+  width: 40%;
+  float: right;
+    display: inline;
+}
+.beerViewRight img{
+  width: 50%;
+  float: right;
+  border: 10px solid white;
+}
+.beerInfo h3{
+  display: inline;
+  padding-right: 15px;
+  padding-bottom: 20px;
+}
+.beerViewDescription{
+  clear: both;
+    padding: 20px;
+      background-color: rgba(231, 231, 231, 0.6);
+      margin: 20px 0px 0px 0px;
+      display: block;
+}
+.beerViewDescription p{
+margin: 0px;
+padding: 0px;
 }
