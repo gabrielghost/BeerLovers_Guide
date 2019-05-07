@@ -6,7 +6,7 @@ To load the app, run `npm i` in the console to load the dependencies, then `npm 
 
 OR simply navigate to this deployed version:
 
-
+www.beerguide.surge.sh
 
 Not all of the APi's data was used for brevity, but we can do so easily if required!
 
