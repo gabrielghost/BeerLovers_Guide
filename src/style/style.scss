@@ -46,6 +46,20 @@ body {
     padding: 10px;
       text-align: justify;
 }
+.beerViewHeader{
+  background-image: url('https://i.ytimg.com/vi/Eg5V_P1BPCk/maxresdefault.jpg');
+  background-size: cover;
+  height: 100px;
+  width: 100%;
+  display: block;
+  color: black;
+}
+.beerViewHeader h1{
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+top: 28px;
+position: relative;
+padding: 10px;
+}
 .beerViewLeft{
   width: 60%;
   float: left;

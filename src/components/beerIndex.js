@@ -22,8 +22,8 @@ class beerView extends Component {
           <p>{item.name}</p>
           </div>
           <div className='beerLiRight'>
-           <p>{item.abv? `ABV: ${item.abv}%` : ``}</p>
-           <p>{item.ibu? `IBU: ${item.ibu}` : ``}</p>
+           <p>{item.abv? `ABV: ${item.abv}%` : `ABV: -`}</p>
+           <p>{item.ibu? `IBU: ${item.ibu}` : `IBU: -`}</p>
           </div>
           </div>
           </Link>

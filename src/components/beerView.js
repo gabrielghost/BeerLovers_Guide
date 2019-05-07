@@ -47,12 +47,14 @@ class beerView extends Component {
 
           return (
             <div className='beerView' key={i}>
+            <div className='beerViewHeader'>
+                          <h1>{item.name? `${item.name}` : 'Oops this beer has no name'}</h1>
+            </div>
             <div className='beerViewLeft'>
-              <h1>{item.name? `${item.name}` : 'Oops this beer has no name'}</h1>
               <div className='beerInfo'>
-              <h3>{item.abv? `ABV: ${item.abv}%` : ''}</h3>
-              <h3>{item.ibu? `IBU: ${item.ibu}` : ''}</h3>
-              <h3>{item.glasswareId? `Glassware: ${item.glasswareId}` : ''}</h3>
+              <h3>{item.abv? `ABV: ${item.abv}%` : 'ABV: -'}</h3>
+              <h3>{item.ibu? `IBU: ${item.ibu}` : 'IBU: -'}</h3>
+              <h3>{item.glasswareId? `Glassware: ${item.glasswareId}` : 'Glassware: -'}</h3>
               <h3>{organicMarker}</h3>
               </div>
               </div>
