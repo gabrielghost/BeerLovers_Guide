@@ -8,6 +8,8 @@ OR simply navigate to this deployed version:
 
 
 
+Not all of the APi's data was used for brevity, but we can do so easily if required!
+
 If you have any questions and the number '42' doesn't answer them, then please email charlielovesbeer@neonseed.com
 
 With fermented wishes and blessings,

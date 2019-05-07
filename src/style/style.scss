@@ -44,7 +44,6 @@ body {
   line-height: 28px;
     border: 1px solid #f9e4b9;
     padding: 10px;
-      text-align: justify;
 }
 .beerViewHeader{
   background-image: url('https://i.ytimg.com/vi/Eg5V_P1BPCk/maxresdefault.jpg');
@@ -76,9 +75,11 @@ padding: 10px;
   border: 10px solid white;
 }
 .beerInfo h3{
-  display: inline;
+  display: inline-block;
   padding-right: 15px;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
+    white-space: nowrap;
+    background-color: rgba(231, 231, 231, 0.6);
 }
 .beerViewDescription{
   clear: both;
@@ -86,6 +87,7 @@ padding: 10px;
       background-color: rgba(231, 231, 231, 0.6);
       margin: 20px 0px 0px 0px;
       display: block;
+            text-align: justify;
 }
 .beerViewDescription p{
 margin: 0px;

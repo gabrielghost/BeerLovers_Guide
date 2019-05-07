@@ -45,6 +45,13 @@ class beerView extends Component {
             beerLabelImg = ''
           }
 
+          let itemStatus;
+          if ('status' in item){
+            if (item.status === 'verified'){
+              itemStatus = 'verified';
+            }
+          }
+
           return (
             <div className='beerView' key={i}>
             <div className='beerViewHeader'>
@@ -54,6 +61,8 @@ class beerView extends Component {
               <div className='beerInfo'>
               <h3>{item.abv? `ABV: ${item.abv}%` : 'ABV: -'}</h3>
               <h3>{item.ibu? `IBU: ${item.ibu}` : 'IBU: -'}</h3>
+              <h3>{item.year? `Year: ${item.year}` : 'Year: -'}</h3>
+              <h3>{itemStatus? `Status: Verified` : 'Status: -'}</h3>
               <h3>{item.glasswareId? `Glassware: ${item.glasswareId}` : 'Glassware: -'}</h3>
               <h3>{organicMarker}</h3>
               </div>

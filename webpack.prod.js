@@ -24,9 +24,9 @@ module.exports = merge(common, {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'MediateMe',
+      title: 'BeerGuide',
       template: 'src/index.html',
     }),
   ],
